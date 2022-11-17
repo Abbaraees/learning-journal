@@ -6,7 +6,9 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans Lao Looped', sans-serif;}
+    font-family: 'Noto Sans Lao Looped', sans-serif;
+    background-color: #FAFAFA;
+}
 
 p {
     line-height: 1.5;
@@ -17,7 +19,7 @@ header {
     width: 100%;
     display: flex;    
     justify-content: space-between;
-    padding: 1em;
+    padding: 1em 5vw;
 }
 
 .logo {
@@ -49,7 +51,7 @@ nav a{
     background: url("../images/article-image-hero.png");
     background-size: cover;
     color: #FFFFFF;
-    padding: 5em 2em 2em 2em;
+    padding: 5em 5vw 2em 5vw;
 }
 
 .hero-section p,
@@ -127,4 +129,37 @@ footer p:first-child {
 footer p:last-child {
     margin-top: 0.5em;
     font-weight: 300;
+}
+
+@media (min-width: 665px) {
+    header {
+        padding-bottom: 5em;
+    }
+    .hero-section {
+        padding: 23em 5vw 5em 5vw;
+    }
+
+    .article-listing {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-gap: 1em;
+        align-items: center;
+        width: 90%;
+        margin: 2em auto;
+    }
+
+    .read-more-btn {
+        grid-column: 1 / -1;
+    }
+
+    .article-listing h2:first-child {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .bio {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        gap: 2em;
+    }
 }
